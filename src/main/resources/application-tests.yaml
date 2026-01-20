@@ -11,8 +11,12 @@ spring:
     username: ${DIC2_DB_USER}
     password: ${DIC2_DB_PWD}
     url: ${DIC2_DB_PWD}
+  jpa:
+    hibernate:
+      ddl-auto: create
+      #ddl-auto: none ne modifie pas le schema
+      #ddl-auto: update mettre a jour les schema
+      #ddl-auto: create supprime+creation
+    show-sql: true
   profiles:
-    active: ${DIC2_PROFILE}
-
-  config:
-    location: ${CONFIG_DIR}
+    active: tests, git
