@@ -7,13 +7,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "employe")
-public class Employe extends Personne {
+public class Compte {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(nullable = false)
-    private Double salary;
+    private String login;
+
+    private String password;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Employe employe;
 }

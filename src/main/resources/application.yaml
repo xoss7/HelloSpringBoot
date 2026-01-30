@@ -1,5 +1,10 @@
 ept:
   git:
+    auth:
+      token:
+        duration: 3600
+        length: 24
+        char: qwertyuiopasdfghjklzxcvbnm1234567890-._#!^
     contact:
       nom: ${ADMIN_NOM:Fall}
       prenom: ${ADMIN_PRENOM:Adama}
